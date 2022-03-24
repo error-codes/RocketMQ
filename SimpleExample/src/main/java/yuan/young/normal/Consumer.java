@@ -1,11 +1,10 @@
-package yuan.young.consumer;
+package yuan.young.normal;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.apache.rocketmq.client.exception.MQClientException;
-import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.MessageExt;
 
 import java.util.List;
@@ -19,7 +18,7 @@ public class Consumer {
 
     public static void main(String[] args) throws MQClientException {
 
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("PlutoYCR");
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("Consumer");
 
         consumer.setNamesrvAddr("www.error-codes.xyz:9876");
         consumer.subscribe("TopicTest", "*");

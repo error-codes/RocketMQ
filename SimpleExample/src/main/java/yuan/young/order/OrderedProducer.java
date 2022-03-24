@@ -19,7 +19,7 @@ public class OrderedProducer {
 
     public static void main(String[] args) throws Exception {
 
-        DefaultMQProducer producer = new DefaultMQProducer("Order");
+        DefaultMQProducer producer = new DefaultMQProducer("ShunXuProducerGroup");
 
         producer.setNamesrvAddr("www.error-codes.xyz:9876");
         producer.start();

@@ -18,7 +18,7 @@ public class OrderedConsumer {
 
     public static void main(String[] args) throws MQClientException {
 
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("Order");
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("ShunXuConsumerGroup");
 
         consumer.setNamesrvAddr("www.error-codes.xyz:9876");
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
